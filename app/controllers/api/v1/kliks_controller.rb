@@ -13,9 +13,9 @@ module Api::V1
     # GET /api/v1/leaderboard
     def leaderboard
       teams = []
-      Team.all.select('teams.name as team, teams.kliks_count as clicks').each_with_index do |team, index|
+      Team.all.each_with_index do |team, index|
         order = index + 1
-        teams.push order: order, team: team.team, clicks: team.clicks
+        teams.push order: order, team: team.name, clicks: team.kliks_count
       end
 
       render json: teams
