@@ -42,3 +42,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # dotenv
 gem 'dotenv-rails', groups: [:development, :test]
+
+# heroku expects this
+# https://devcenter.heroku.com/articles/getting-started-with-rails5#specify-ruby-version-in-app
+ruby '2.4.1'
